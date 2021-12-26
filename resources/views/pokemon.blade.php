@@ -64,7 +64,7 @@
 
             <section class="my-5 bg-secondary p-2 rounded mx-auto"
                     style="max-width: 1000px; background-image: url('./images/back1.png')">
-                <h3 class="text-light my-2 ml-3">Стадии Эволюции</h3>
+                <h3 class="text-light my-2 ml-3">Evolution Stages</h3>
                 <div class="row no-gutters justify-content-center m-lg-2 align-items-center">
                     <div class="card jump--hover m-3" style="max-width: 160px">
                         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" class="card-img-top" alt="...">

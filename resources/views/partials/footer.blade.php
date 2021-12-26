@@ -4,7 +4,6 @@
         color: white;
     }
     .f-container{
-        width: 1280px;
         margin: auto;
         display: flex;
         justify-content: space-between;
