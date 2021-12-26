@@ -3,7 +3,7 @@
     Home | Pokeproject
 @endsection
 @section('content')
-<section class="my-4" >
+<section class="mb-2 py-4" >
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: 10px">
         <div class="card jump--hover">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" class="card-img-top" alt="...">
