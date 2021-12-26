@@ -11,9 +11,9 @@
     <link rel="icon" href="pokemon.ico" type="image/icon type">
     <title>@yield('title', 'Pokeproject')</title>
 </head>
-<body style="margin: 0">
+<body style="margin: 0; background-image: url('./images/back2.png')">
 @include('partials.header')
-    <main class="container">
+    <main class="container pb-3" style="background-color: white;">
         @yield('content')
     </main>
 @include('partials.footer')
