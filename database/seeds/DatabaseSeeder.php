@@ -14,6 +14,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('user_roles')->insert([
+            'id' => 1,
+            'name' => 'Администратор',
+        ]);
+
+        DB::table('user_roles')->insert([
+            'id' => 2,
+            'name' => 'Редактор',
+        ]);
+
+        DB::table('user_roles')->insert([
+            'id' => 3,
+            'name' => 'Обычный пользователь',
+        ]);
+
         for ($i=1; $i <= 50; $i++) {
             DB::table('users')->insert([
                 'name' => Str::random(10),

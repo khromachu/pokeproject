@@ -22,3 +22,7 @@ Route::get('/welcome', function () {
 Route::get('/pokemon', function () {
     return view('pokemon');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
