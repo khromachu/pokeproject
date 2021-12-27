@@ -20,5 +20,10 @@
         </div>
     </div>
 </div>
-    <admin-panel></admin-panel>
+@if(Auth::user() != null)
+    @if(Auth::user()->role_id == 1)
+        <admin-panel></admin-panel>
+    @endif
+@endif
+
 @endsection

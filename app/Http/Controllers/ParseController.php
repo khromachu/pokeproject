@@ -5,13 +5,17 @@ namespace App\Http\Controllers;
 use App\Pokemon;
 use App\Type;
 use App\AttackRelation;
+use Illuminate\Http\Request;
+
 
 class ParseController extends Controller
 {
     public $api_url = 'https://pokeapi.co/api/v2';
 
-    public function parse_all(){
-        $jpokemons = $this->getJSON($this->api_url.'/pokemon?limit=99');
+    public function parse_all(Request $req){
+        $jpokemons = $this->getJSON($this->api_url
+            .'/pokemon?limit='.$req->input('limit', 50)
+            .'&offset='.$req->input('offset', 0));
         foreach ($jpokemons->results as $poke){
             $this->parsePokemon($this->getJSON($poke->url));
         }

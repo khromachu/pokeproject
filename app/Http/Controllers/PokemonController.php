@@ -23,6 +23,10 @@ class PokemonController extends Controller
             ->with('pages_count', ceil(floatval($count)/12));
     }
 
+    public function get_pokemons(Request $req){
+        return Pokemon::all()->forPage($req->input('page', 1), 50);
+    }
+
     public function getEvoChain($pokemon){
         $evoChain = [$pokemon];
         $preEvoId = $pokemon->pre_evolution_id;
