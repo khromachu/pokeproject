@@ -20,5 +20,5 @@
         </div>
     </div>
 </div>
-    <example-component></example-component>
+    <admin-panel></admin-panel>
 @endsection
