@@ -11,17 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'PokemonController@pokemons_list_page');
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/pokemon', function () {
-    return view('pokemon');
-});
+Route::get('/pokemon/{pokemon_id}', 'PokemonController@pokemon_page');
+Route::post('/pokemon/{pokemon_id}/edit', 'PokemonController@edit_pokemon');
 
 Auth::routes();
 

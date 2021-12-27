@@ -1,7 +1,7 @@
 <header>
-    <nav class="navbar navbar-expand-lg px-3 navbar-light" style="background-color: #ced4da; background-image: url('./images/back1.png'); justify-content: center">
-        <a class="navbar-brand" href="#">
-            <img src="pokemon.svg" alt="" width="50" height="50" class="d-inline-block align-text-center mx-2">
+    <nav class="navbar navbar-expand-lg px-3 navbar-light" style="background-color: #ced4da; background-image: url('/images/back1.png'); justify-content: center">
+        <a class="navbar-brand" href="/">
+            <img src="/pokemon.svg" alt="" width="50" height="50" class="d-inline-block align-text-center mx-2">
             Pokemon Database
         </a>
         <form class="mx-3" style="width: 600px">
@@ -36,7 +36,7 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
-                @else
+                    @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             <div>{{ Auth::user()->name }} <span class="caret"></span></div>
