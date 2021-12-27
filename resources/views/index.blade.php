@@ -30,7 +30,7 @@
                 @endif
                 <li class="page-item @if($page==$pages_count) active @endif "><a class="page-link" href="{{'/?page='.$pages_count}}">{{$pages_count}}</a></li>
                 <li class="page-item @if($page==$pages_count) disabled @endif ">
-                    <a class="page-link" href="{{'/?page='.($page-1)}}" aria-label="Next">
+                    <a class="page-link" href="{{'/?page='.($page+1)}}" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>
@@ -77,7 +77,7 @@
                 @endif
                 <li class="page-item @if($page==$pages_count) active @endif "><a class="page-link" href="{{'/?page='.$pages_count}}">{{$pages_count}}</a></li>
                 <li class="page-item @if($page==$pages_count) disabled @endif ">
-                    <a class="page-link" href="{{'/?page='.($page-1)}}" aria-label="Next">
+                    <a class="page-link" href="{{'/?page='.($page+1)}}" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>
