@@ -17,7 +17,7 @@
 </head>
 <body style="margin: 0; background-image: url('/images/back2.png')">
 @include('partials.header')
-    <main class="container py-5" style="background-color: white; min-height: 90vh">
+    <main id="app" class="container py-5" style="background-color: white; min-height: 90vh">
         @yield('content')
     </main>
 @include('partials.footer')
