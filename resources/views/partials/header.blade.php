@@ -6,11 +6,16 @@
         </a>
         <ul class="navbar-nav" style="font-size: 16px;">
             <li class="nav-item">
-                <a class="nav-link" href="/">Покемоны</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="/welcome">О нас</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/">Все Покемоны</a>
+            </li>
+            @if(Auth::user() != null)
+            <li class="nav-item">
+                <a class="nav-link" href="/pokemons-of-day">Покемоны дня</a>
+            </li>
+            @endif
         </ul>
         <form class="mx-3" style="width: 550px" action="/pokemons/get-by-url">
             <div style="display: grid; grid-template-columns: 1fr 2fr">

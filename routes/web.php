@@ -17,6 +17,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/pokemons-of-day', function () {
+    return view('pokemons-of-day')->with('pokemons', \App\Pokemon::all()->random(5));
+});
+
 Route::get('/pokemon/{pokemon_id}', 'PokemonController@pokemon_page');
 Route::post('/pokemon/{pokemon_id}/edit', 'PokemonController@edit_pokemon');
 

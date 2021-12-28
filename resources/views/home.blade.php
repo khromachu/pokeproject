@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title')
+    Profile | Pokeproject
+@endsection
 
 @section('content')
 <div class="container">
