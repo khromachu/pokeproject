@@ -21,14 +21,8 @@
         </div>
     </div>
 </div>
-@if(Auth::user() != null)
-    @if(Auth::user()->role_id == 1)
-        <admin-panel></admin-panel>
-    @endif
-@endif
-<div class="my-3"></div>
-@if(Auth::user() != null)
-    @if(Auth::user()->role_id != 1)
+<div class="mt-3">
+    @if(Auth::user() != null)
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -66,6 +60,11 @@
                 </div>
             </div>
         </div>
+    @endif
+</div>
+@if(Auth::user() != null)
+    @if(Auth::user()->role_id == 1)
+        <admin-panel></admin-panel>
     @endif
 @endif
 
