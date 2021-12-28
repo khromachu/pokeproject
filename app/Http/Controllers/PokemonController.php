@@ -45,7 +45,8 @@ class PokemonController extends Controller
     }
 
     public function pokemon_page(Request $req, $pokemon_id){
-        $pokemon = Pokemon::all()->where('id', intval($pokemon_id))->first()->load('type');
+        $pokemon = Pokemon::all()->where('id', intval($pokemon_id))->load('type')->first();
+        if ($pokemon==null) return redirect('/');
         $prev = Pokemon::all()->where('id', '<', $pokemon_id)->last();
         $next = Pokemon::all()->where('id', '>', $pokemon_id)->first();
         $weaknesses = AttackRelation::all()
@@ -79,9 +80,11 @@ class PokemonController extends Controller
                     $pokemon->type_id = $req->input('type_id');
                     $pokemon->save();
                 }
-
         }
-
         return redirect('/pokemon/'.$pokemon->id);
+    }
+
+    public function find_pokemon(Request $req){
+        return redirect('/pokemon/'.$req->input('number'));
     }
 }

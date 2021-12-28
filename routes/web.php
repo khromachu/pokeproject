@@ -28,3 +28,5 @@ Route::get('/parse/pokemons/all', 'ParseController@parse_all');
 Route::get('/parse/relations/all', 'ParseController@parseAttackRelations');
 
 Route::get('/api/pokemons/get', 'PokemonController@get_pokemons');
+
+Route::get('/pokemons/get-by-url', 'PokemonController@find_pokemon');

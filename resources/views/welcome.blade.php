@@ -1,93 +1,22 @@
 @extends('layouts.master')
 @section('title')
-    Hello
+    About | Pokeproject
 @endsection
 @section('content')
-
-<style>
-    html, body {
-        background-color: #fff;
-        color: #636b6f;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 200;
-        height: 100vh;
-        margin: 0;
-    }
-
-    .full-height {
-        height: 100vh;
-    }
-
-    .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    .position-ref {
-        position: relative;
-    }
-
-    .top-right {
-        position: absolute;
-        right: 10px;
-        top: 18px;
-    }
-
-    .content {
-        text-align: center;
-    }
-
-    .title {
-        font-size: 84px;
-    }
-
-    .links > a {
-        color: #636b6f;
-        padding: 0 25px;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: .1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-
-    .m-b-md {
-        margin-bottom: 30px;
-    }
-</style>
-
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}">Register</a>
-                @endif
-            @endauth
-        </div>
-    @endif
-
-    <div class="content">
-        <div class="title m-b-md">
-            Laravel
-        </div>
-
-        <div class="links">
-            <a href="https://laravel.com/docs">Docs</a>
-                <a href="https://laracasts.com/">Laracasts</a>
-            <a href="https://laravel-news.com/">News</a>
-                <a href="https://blog.laravel.com/">Blog</a>
-            <a href="https://nova.laravel.com/">Nova</a>
-                <a href="https://forge.laravel.com/">Forge</a>
-            <a href="https://github.com/laravel/laravel">GitHub</a>
-        </div>
+    <h1 class="mb-4" style="text-align: center">Добро пожаловать!</h1>
+    <div class="mx-5">
+        <p style="font-size: 18px;">Уже более 10 лет дети со всего мира исследуют чарующий мир Покемон. На сегодняшний день серия продукции «Покемон» включает в себя видеоигры, карточную игру «Покемон», анимационный телесериал «Покемон», фильмы, игрушки и многое другое. Многие родители считают, что карточная игра и видеоигры серии «Покемон» поощряют их детей к чтению, потому что чтение необходимо в большинстве игр серии Покемон. Также игры развивают стратегическое мышление, а во многих случаях — и основные навыки счета. В серии «Покемон» всячески подчёркивается важность спортивного духа и уважения к другим игрокам.</p>
+        <h3 class="my-4">Кто такие Покемоны?</h3>
+        <p style="font-size: 18px;">Покемоны — это создания всевозможных форм и размеров, живущие в природе рядом с людьми. Большинство Покемонов не умеет говорить, может лишь произнести свое имя. Покемонов растят и развивают их владельцы (называемые «тренерами»). Переживая приключения, Покемоны растут, набираются опыта, а иногда и превращаются в других, более сильных Покемонов. Некоторые Покемоны, такие как Пикачу, Пиплап и Чаризард, играют значительную роль в серии видеоигр, карточной игре и телевизионных шоу, но это лишь немногие из примерно 500 существ, населяющих вселенную Покемон.</p>
     </div>
-</div>
-
+    <div class="row justify-content-center">
+    <a href="/" type="button" class="btn btn-primary my-3" style="font-size: 18px; max-width: 400px;">
+        Узнать больше об персонажах «Покемон»!
+    </a>
+    </div>
+    <div class="row justify-content-center">
+        <img src= "/images/pokemones.png" style="max-width: 500px">
+    </div>
 @endsection
+
 
