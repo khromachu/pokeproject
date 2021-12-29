@@ -6,14 +6,14 @@
         </a>
         <ul class="navbar-nav" style="font-size: 16px;">
             <li class="nav-item">
-                <a class="nav-link" href="/welcome">О нас</a>
+                <a class="nav-link" href="/welcome">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/">Все Покемоны</a>
+                <a class="nav-link" href="/">All Pokémon</a>
             </li>
             @if(Auth::user() != null)
             <li class="nav-item">
-                <a class="nav-link" href="/pokemons-of-day">Покемоны дня</a>
+                <a class="nav-link" href="/pokemons-of-day">Pokémon of the Day</a>
             </li>
             @endif
         </ul>

@@ -3,19 +3,22 @@
     About | Pokeproject
 @endsection
 @section('content')
-    <h1 class="mb-4" style="text-align: center">Добро пожаловать!</h1>
+    <h1 class="mb-4" style="text-align: center">Welcome!</h1>
     <div class="mx-5">
-        <p style="font-size: 18px;">Уже более 10 лет дети со всего мира исследуют чарующий мир Покемон. На сегодняшний день серия продукции «Покемон» включает в себя видеоигры, карточную игру «Покемон», анимационный телесериал «Покемон», фильмы, игрушки и многое другое. Многие родители считают, что карточная игра и видеоигры серии «Покемон» поощряют их детей к чтению, потому что чтение необходимо в большинстве игр серии Покемон. Также игры развивают стратегическое мышление, а во многих случаях — и основные навыки счета. В серии «Покемон» всячески подчёркивается важность спортивного духа и уважения к другим игрокам.</p>
-        <h3 class="my-4">Кто такие Покемоны?</h3>
-        <p style="font-size: 18px;">Покемоны — это создания всевозможных форм и размеров, живущие в природе рядом с людьми. Большинство Покемонов не умеет говорить, может лишь произнести свое имя. Покемонов растят и развивают их владельцы (называемые «тренерами»). Переживая приключения, Покемоны растут, набираются опыта, а иногда и превращаются в других, более сильных Покемонов. Некоторые Покемоны, такие как Пикачу, Пиплап и Чаризард, играют значительную роль в серии видеоигр, карточной игре и телевизионных шоу, но это лишь немногие из примерно 500 существ, населяющих вселенную Покемон.</p>
+        <p style="font-size: 18px;">For over 10 years, children from all over the world have been exploring the enchanting world of Pokémon. Today, the Pokémon product line includes video games, the Pokémon card game, the Pokémon animated television series, movies, toys, and more. Many parents find that the Pokémon card and video games encourage their children to read because reading is essential in most Pokémon games. Games also develop strategic thinking and, in many cases, basic numeracy skills. The Pokémon series emphasizes the importance of a sporting spirit and respect for other players.</p>
+        <div class="row justify-content-center">
+            <img src= "/images/pokemons.png" style="max-width: 400px">
+        </div>
+        <h3 class="mb-4">Who are Pokémon?</h3>
+        <p style="font-size: 18px;">Pokémon are creatures of all shapes and sizes that live in nature next to humans. Most Pokémon cannot speak, they can only pronounce their name. Pokémon are raised and developed by their owners (called "trainers"). Experiencing adventures, Pokémon grow, gain experience, and sometimes turn into other, more powerful Pokémon. Some Pokémon such as Pikachu, Piplup, and Charizard play significant roles in the video game series, card game, and television shows, but these are just a few of the roughly 500 creatures that inhabit the Pokémon universe.</p>
     </div>
     <div class="row justify-content-center">
     <a href="/" type="button" class="btn btn-primary my-3" style="font-size: 18px; max-width: 400px;">
-        Узнать больше об персонажах «Покемон»!
+        Learn more about Pokémon characters!
     </a>
-    </div>
-    <div class="row justify-content-center">
-        <img src= "/images/pokemones.png" style="max-width: 500px">
+        <div class="row justify-content-center">
+            <img src= "/images/pokemones.png" style="max-width: 400px">
+        </div>
     </div>
 @endsection
 

@@ -1,15 +1,15 @@
 @extends('layouts.master')
 @section('title')
-    Pokemons of Day | Pokeproject
+    Pokemons of the Day | Pokeproject
 @endsection
 @section('content')
-    <h2 class="mb-3" style="text-align: center">Ваши Покемоны дня</h2>
+    <h2 class="mb-3" style="text-align: center">Your Pokémon of the Day</h2>
     <div class="mx-5">
-        <p style="font-size: 18px; text-align: center">Нажмите на кнопку "Испытать удачу!" и получите команду из пяти Покемонов, подобранных для Вас случайным образом! Испытать удачу можно неограниченное количество раз :)</p>
+        <p style="font-size: 18px; text-align: center">Click on the button "Try your luck!" and get a team of five Pokémon randomly selected for you! You can try your luck an unlimited number of times :)</p>
     </div>
     <div class="row justify-content-center">
         <a href="/pokemons-of-day" type="button" class="btn btn-primary my-3" style="font-size: 18px; max-width: 400px;">
-            Испытать удачу!
+            Try your luck!
         </a>
     </div>
     <section class="mb-2 py-2" >
