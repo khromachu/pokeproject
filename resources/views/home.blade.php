@@ -4,35 +4,19 @@
 @endsection
 
 @section('content')
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-            <img src="..." class="rounded me-2" alt="...">
-            <strong class="me-auto">Bootstrap</strong>
-            <small>11 mins ago</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    <div class="alert alert-success alert-dismissible fade show mx-auto" role="alert">
+        <div class="card-body" style="max-height: 60px">
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                </div>
+            @endif
+            <strong style="font-size: 16px">Pika-pika! You are logged in!</strong>
         </div>
-        <div class="toast-body">
-            Hello, world! This is a toast message.
-        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-                        You are logged in!
-                    </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="mt-3">
+    <div class="mt-3">
     @if(Auth::user() != null)
         <div class="container" style="max-width: 800px; border-color: #95999c">
             <div class="row justify-content-center">
@@ -42,6 +26,10 @@
                         <div class="card-body" style="background-image: url('/images/back1.png'); border-color: grey">
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
+                                <div class="form-group row mx-auto" style="max-width: 35%;">
+                                    <img src="https://avatars.dicebear.com/api/adventurer-neutral/{{ __('E-Mail Address') }}.svg"
+                                         class="img-thumbnail" style="border-radius: 5px">
+                                </div>
                                 <div class="form-group row">
                                     <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
                                     <div class="col-md-6">
