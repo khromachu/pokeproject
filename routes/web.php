@@ -17,6 +17,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/admin', function () {
+    return view('admin');
+});
+
 Route::get('/pokemons-of-day', function () {
     return view('pokemons-of-day')->with('pokemons', \App\Pokemon::all()->random(5));
 });

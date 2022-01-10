@@ -11,11 +11,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="/">All Pokémon</a>
             </li>
-            @if(Auth::user() != null)
-            <li class="nav-item">
-                <a class="nav-link" href="/pokemons-of-day">Pokémon of the Day</a>
-            </li>
-            @endif
         </ul>
         <form class="mx-3" style="width: 550px" action="/pokemons/get-by-url">
             <div style="display: grid; grid-template-columns: 1fr 2fr">
@@ -30,7 +25,13 @@
             </div>
         </form>
 
-            <ul class="navbar-nav" style="display: flex; align-items: center; text-align: end; font-size: 16px">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                Profile
+                <a><i class="far fa-user"></i></a>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -40,29 +41,43 @@
                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                     @endif
-                    @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <div>{{ Auth::user()->name }} <span class="caret"></span></div>
-                                    @switch(Auth::user()->role_id)
-                                        @case(1) Администратор @break
-                                        @case(2) Редактор @break
-                                        @case(3) Обычный пользователь @break
-                                    @endswitch
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        <a href="/home" class="btn btn-outline-primary"><i class="fas fa-home"></i></a>
+                @else
+                    <li class="nav-item border-bottom border-dark border-3 pb-2">
+                        <nav style="text-align: center">
+                            <div>{{ Auth::user()->name }} <span class="caret"></span></div>
+                            @switch(Auth::user()->role_id)
+                                @case(1) (Администратор) @break
+                                @case(2) (Редактор) @break
+                                @case(3) (Обычный пользователь) @break
+                                @endswitch
+                        </nav>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Your Profile</a>
+                    </li>
+                    @if(Auth::user() != null)
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pokemons-of-day">Your Pokémon of the Day</a>
+                        </li>
+                    @endif
+                    @if(Auth::user() != null)
+                        @if(Auth::user()->role_id == 1)
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin">Admin Panel</a>
+                        </li>
+                        @endif
+                    @endif
+                    <li class="nav-item">
+                        <a class="nav-link"  href="{{ route('logout') }}" onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </li>
                 @endguest
             </ul>
+        </div>
     </nav>
 </header>
